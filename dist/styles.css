@@ -11,3 +11,9 @@
 .platforms{gap:20px;flex-wrap:wrap}
 .pricing-card .button{font-size:14px}
 @media(max-width:760px){.beta-tag{font-size:12px}.hero-description{font-size:15px}.gift-note{font-size:12px}.pricing-card>small,.download-status{font-size:12px}.contact-card p{font-size:14px}}
+
+/* Shared AI TransMirror brand asset. */
+.brand-icon{display:block;object-fit:contain;flex-shrink:0;background:transparent;padding:0;border-radius:0}
+.mini-brand{display:block;width:30px;height:30px;object-fit:contain;margin:0}
+.download-brand-icon{display:block;object-fit:contain;width:210px;height:210px}
+@media(max-width:760px){.mini-brand{width:24px;height:24px}}
