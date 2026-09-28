@@ -31,3 +31,17 @@
 .email-channel .email-note{max-width:240px;margin-top:25px}
 @media(max-width:1000px){.contact-channels{grid-template-columns:repeat(2,minmax(0,1fr))}.email-channel{grid-column:1/-1;padding:32px}}
 @media(max-width:600px){.contact-channels{grid-template-columns:1fr}.email-channel{grid-column:auto}.qr-image-link{height:400px}}
+/* Website addition and bilingual reading share the product spotlight. */
+h1{font-size:clamp(34px,4.1vw,58px)}
+.website-intro-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:24px}
+.website-add-card,.web-reading-card{padding:32px;border:1px solid var(--line);border-radius:22px;background:#f7faff;min-width:0}
+.website-intro-grid h3{font-size:24px}.website-intro-grid p{font-size:16px;color:#748095}
+.address-example{display:flex;flex-direction:column;gap:8px;padding:17px 20px;margin:24px 0;background:#fff;border:1px solid #dce6fb;border-radius:12px}
+.address-example>span{font-size:14px;color:#748095}.address-example code{font-size:18px;color:#2861ed;overflow-wrap:anywhere}.address-example .address-example-label{font-size:12px}
+.website-add-card ol{padding-left:22px;color:#5d6e89;font-size:16px;line-height:2.1}
+.website-types{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.website-types span{background:#e8f0ff;color:#4e70a6;padding:5px 12px;border-radius:8px;font-size:14px}
+.article-mirror{display:grid;grid-template-columns:1fr 1fr;background:white;border:1px solid #e0e7f4;border-radius:12px;overflow:hidden;margin-top:25px}
+.article-mirror>div{padding:23px;min-width:0}.article-mirror>div+div{border-left:1px solid #e0e7f4;background:#fcfdff}.article-mirror span{font-size:12px;color:#7991b4}.article-mirror h4{font-size:20px;line-height:1.6;margin:16px 0}.article-mirror h5{font-size:16px;margin:20px 0 10px}.article-mirror p{font-size:14px;line-height:1.9}.web-reading-card .reading-caption,.website-compatibility{font-size:12px;color:#8a96a8;line-height:1.9}.website-compatibility{margin:22px 0 0}.web-reading{padding-bottom:20px}
+@media(max-width:1050px){.nav nav{gap:15px}.nav{gap:20px}.website-intro-grid{grid-template-columns:1fr}}
+@media(max-width:760px){h1{font-size:36px}.website-add-card,.web-reading-card{padding:24px}.article-mirror>div{padding:15px}.article-mirror h4{font-size:17px}.website-intro-grid h3{font-size:22px}.platforms .platform-more{display:inline-flex!important}}
+@media(max-width:380px){.article-mirror{grid-template-columns:1fr}.article-mirror>div+div{border-left:0;border-top:1px solid #e0e7f4}}
