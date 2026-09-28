@@ -2,7 +2,7 @@
 window.SITE_CONFIG = {
   windowsDownloadUrl: "",
   macDownloadUrl: "",
-  contactEmail: "",
+  contactEmail: "aiyijing8888@163.com",
   contactUrl: "",
   contactLabel: "联系 AI译镜团队"
 };
