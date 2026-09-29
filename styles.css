@@ -16,6 +16,8 @@
 .brand-icon{display:block;object-fit:contain;flex-shrink:0;background:transparent;padding:0;border-radius:0}
 .mini-brand{display:block;width:30px;height:30px;object-fit:contain;margin:0}
 .download-brand-icon{display:block;object-fit:contain;width:210px;height:210px}
+
+.enterprise-plan{margin-top:22px;padding:20px 21px;border:1px solid #dce6f7;border-radius:14px;background:#fff}.enterprise-plan>div{display:flex;align-items:center;justify-content:space-between;gap:16px}.enterprise-plan strong{font-size:15px}.enterprise-plan>div span{font-size:11px;color:#667995;background:#eef2f8;border-radius:20px;padding:4px 10px;white-space:nowrap}.enterprise-plan p{margin:10px 0 8px;color:#7f8da2;font-size:13px;line-height:1.8}.enterprise-plan a{color:var(--blue);font-size:13px;font-weight:600}
 @media(max-width:760px){.mini-brand{width:24px;height:24px}}
 /* Contact channels: original QR images remain intact and open at full resolution. */
 .contact{display:block}
