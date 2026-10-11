@@ -48,11 +48,15 @@
     ['＋ 添加网站','＋ Add website','＋ サイトを追加','＋ 웹사이트 추가'],
     ['♢ 工作区数据保存在本机','♢ Workspace data is stored locally','♢ ワークスペースデータは端末内に保存','♢ 작업 공간 데이터는 기기에 저장됩니다'],
     ['个人工作空间 /','Personal workspace /','個人ワークスペース /','개인 작업 공간 /'],
+    ['个人工作空间　/','Personal workspace　/','個人ワークスペース　/','개인 작업 공간　/'],
     ['• 双语阅读','• Bilingual reading','• バイリンガル表示','• 이중 언어 읽기'],
     ['◌ 独立会话','◌ Separate session','◌ 独立セッション','◌ 독립 세션'],
     ['⌕ 搜索或开始新聊天','⌕ Search or start a new chat','⌕ 検索または新しいチャット','⌕ 검색 또는 새 채팅 시작'],
+    ['⌕　搜索或开始新聊天','⌕　Search or start a new chat','⌕　検索または新しいチャット','⌕　검색 또는 새 채팅 시작'],
     ['⌂ 主页','⌂ Home','⌂ ホーム','⌂ 홈'],
+    ['⌂　主页','⌂　Home','⌂　ホーム','⌂　홈'],
     ['工作区 3','Workspaces 3','ワークスペース 3','작업 공간 3'],
+    ['工作区　3','Workspaces　3','ワークスペース　3','작업 공간　3'],
     ['工作区数据保存在本机','Workspace data is stored locally','ワークスペースデータは端末内に保存','작업 공간 데이터는 기기에 저장됩니다'],
     ['个人账户','Personal account','個人アカウント','개인 계정'],
     ['个人工作空间','Personal workspace','個人ワークスペース','개인 작업 공간'],
@@ -63,6 +67,7 @@
     ['搜索或开始新聊天','Search or start a new chat','検索または新しいチャット','검색 또는 새 채팅 시작'],
     ['新的业务消息……','New business message…','新しいビジネスメッセージ…','새 비즈니스 메시지…'],
     ['回复客户消息 🎙','Reply to customer 🎙','顧客に返信 🎙','고객에게 답장 🎙'],
+    ['回复客户消息　　🎙','Reply to customer　　🎙','顧客に返信　　🎙','고객에게 답장　　🎙'],
     ['译写已开启 · zh → en · 翻译后确认','Translation composer on · zh → en · Review before sending','翻訳入力オン · zh → en · 送信前に確認','번역 작성 켜짐 · zh → en · 전송 전 확인'],
     ['翻译内容','Translation','翻訳内容','번역 내용'],
     ['简体中文','Simplified Chinese','簡体字中国語','중국어 간체'],
@@ -289,13 +294,14 @@
   function selector() {
     const host = document.createElement('label'); host.className = 'language-picker';
     host.setAttribute('aria-label', 'Display language');
+    const icon = document.createElement('span'); icon.className = 'language-picker-icon'; icon.textContent = '文'; icon.setAttribute('aria-hidden', 'true');
     const select = document.createElement('select'); select.setAttribute('aria-label', 'Display language');
     for (const [value, label] of Object.entries(locales)) { const option = document.createElement('option'); option.value = value; option.textContent = label; select.append(option); }
     select.value = locale; select.addEventListener('change', () => { locale = select.value; localStorage.setItem(storageKey, locale); apply(); document.dispatchEvent(new CustomEvent('ui-language-changed', { detail: locale })); });
-    host.append('🌐 ', select); return host;
+    host.append(icon, select); return host;
   }
   document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('.nav'); if (nav) nav.insertBefore(selector(), nav.querySelector('.nav-download'));
+    const actions = document.querySelector('.nav-actions'); if (actions) actions.insertBefore(selector(), actions.querySelector('.nav-download'));
     apply();
     new MutationObserver(records => { for (const record of records) { if (record.type === 'attributes') apply(record.target); else for (const node of record.addedNodes) if (node.nodeType === 1 || node.nodeType === 3) apply(node.nodeType === 1 ? node : node.parentElement); } }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['aria-label','title','placeholder','alt'] });
   });
