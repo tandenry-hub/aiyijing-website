@@ -24,11 +24,17 @@
     const url = safeUrl(value);
     if (!url) return;
     const link = document.querySelector('#download-' + platform);
-    if (!link) return;
-    link.href = url;
-    link.textContent = '↓  ' + label;
-    link.removeAttribute('aria-disabled');
-    link.classList.remove('unavailable');
+    if (link) {
+      link.href = url;
+      link.textContent = '↓  ' + label;
+      link.removeAttribute('aria-disabled');
+      link.classList.remove('unavailable');
+    }
+    document.querySelectorAll('[data-download-platform="' + platform + '"]').forEach(downloadLink => {
+      downloadLink.href = url;
+      downloadLink.removeAttribute('aria-disabled');
+      downloadLink.classList.remove('unavailable');
+    });
     availability[platform] = true;
   });
   const downloadStatus = document.querySelector('#download-status');
