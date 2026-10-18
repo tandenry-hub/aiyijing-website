@@ -1,6 +1,11 @@
 (() => {
   const locales = { zh: '中文', en: 'English', ja: '日本語', ko: '한국어' };
   const rows = [
+    ['Word 文档，原文与译文并排读。','Read Word documents beside their translations.','Word文書を原文と翻訳で並べて読む。','Word 문서의 원문과 번역을 나란히 읽으세요.'],
+    ['真实客户端截图：按段落点选翻译，随时对照原文。','Actual app screenshot: click paragraphs to translate and compare with the source.','実際のアプリ画面：段落をクリックして翻訳し、原文と比較。','실제 앱 화면: 문단을 클릭해 번역하고 원문과 비교하세요.'],
+    ['图片里的文字，也能在原位置对照。','Compare text in images at its original position.','画像内の文字も元の位置で比較。','이미지 속 글도 원래 위치에서 비교하세요.'],
+    ['真实客户端截图：本地识别图片文字，按需翻译选中区域。','Actual app screenshot: recognize image text locally and translate selected areas.','実際のアプリ画面：画像の文字を端末で認識し、選択した領域を翻訳。','실제 앱 화면: 이미지 글자를 로컬에서 인식하고 선택한 영역을 번역하세요.'],
+    ['手动点击翻译实拍 · 点击图片查看原图 ↗','Actual click-to-translate view · Click to view full image ↗','クリック翻訳の実画面 · クリックで原寸表示 ↗','클릭 번역 실제 화면 · 클릭하여 원본 보기 ↗'],
     ['译镜 TransMirror｜网页与本地文档镜像翻译','TransMirror | Web and Local Document Translation','トランスミラー｜ウェブとローカル文書の対訳表示','트랜스미러 | 웹 및 로컬 문서 번역'],
     ['译镜支持网页、PDF、DOCX 与图片的原文译文并排阅读。本地打开文件、本地 OCR 识别，按需点击翻译或全篇翻译；翻译文字由所选引擎处理。','TransMirror displays websites, PDFs, DOCX files, and images beside their translations. Open files and run OCR locally; click to translate selected text or translate the whole file using your chosen engine.','トランスミラーはウェブページ、PDF、DOCX、画像の原文と翻訳を並べて表示します。ファイルの読み取りとOCRは端末上で行い、クリックした部分または全文を選択した翻訳エンジンで翻訳できます。','트랜스미러는 웹페이지, PDF, DOCX, 이미지의 원본과 번역을 나란히 보여줍니다. 파일 열기와 OCR은 기기에서 처리하고, 선택한 부분 또는 전체를 지정한 번역 엔진으로 번역합니다.'],
     ['本地打开 PDF、DOCX 与图片，原文译文并排对照；本地 OCR 识别，按需点击或全篇翻译。','Open PDFs, DOCX files, and images locally. Compare source and translation side by side, with local OCR and click or full-file translation.','PDF、DOCX、画像を端末上で開き、原文と翻訳を並べて比較。ローカルOCRとクリック翻訳・全文翻訳に対応。','PDF, DOCX, 이미지를 기기에서 열고 원본과 번역을 나란히 비교하세요. 로컬 OCR과 클릭 또는 전체 번역을 지원합니다.'],
