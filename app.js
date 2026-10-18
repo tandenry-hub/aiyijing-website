@@ -43,7 +43,7 @@
   const contact = document.querySelector('#contact-link');
   if (!contact) return;
   const contactUrl = safeUrl(config.contactUrl);
-  if (contactUrl) { contact.href = contactUrl; contact.textContent = config.contactLabel || '联系 AI译镜团队'; }
+  if (contactUrl) { contact.href = contactUrl; contact.textContent = config.contactLabel || '联系译镜团队'; }
   else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.contactEmail || '')) { contact.href = 'mailto:' + config.contactEmail; contact.textContent = config.contactEmail; }
   const contactDescription = document.querySelector('#contact-description');
   if (contact.hasAttribute('href')) { contact.hidden = false; if (contactDescription) contactDescription.textContent = '内测反馈 · 使用咨询 · 合作交流'; }
